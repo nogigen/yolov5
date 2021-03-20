@@ -13,6 +13,9 @@ preprocessing.ipynb script allows me to create the desired data/folder structure
          └── val
 
 
+I saved the google colab that I worked as a .ipynb, you can check baseball_ball_detection_w_yolov5.ipynb for that.
+
+
 Here are some of the results of fine-tuning yolov5
 
 | ![14.jpg](14.jpg) | 
@@ -72,41 +75,9 @@ Training times for YOLOv5s/m/l/x are 2/4/6/8 days on a single V100 (multi-GPU ti
 $ python train.py --img 640 --batch 16 --epochs 50 --data baseball.yaml --weights yolov5s.pt --nosave --cache
 ```
 
-More information about inference, exporting, plotting can be found at  [ultralytics/yolov5](https://github.com/ultralytics/yolov5). The google colab link I shared makes everything so much easier, it's easy to follow.
 
+## More information about inference, exporting, plotting results & metrics can be found at  [ultralytics/yolov5](https://github.com/ultralytics/yolov5). The ultralyrics's shared google colab makes everything so much easier, it's easy to follow.
 
-## Inference
-
-detect.py runs inference on a variety of sources, downloading models automatically from the [latest YOLOv5 release](https://github.com/ultralytics/yolov5/releases) and saving results to `runs/detect`.
-```bash
-$ python detect.py --source 0  # webcam
-                            file.jpg  # image 
-                            file.mp4  # video
-                            path/  # directory
-                            path/*.jpg  # glob
-                            rtsp://170.93.143.139/rtplive/470011e600ef003a004ee33696235daa  # rtsp stream
-                            rtmp://192.168.1.105/live/test  # rtmp stream
-                            http://112.50.243.8/PLTV/88888888/224/3221225900/1.m3u8  # http stream
-```
-
-
-### PyTorch Hub
-
-To run **batched inference** with YOLOv5 and [PyTorch Hub](https://github.com/ultralytics/yolov5/issues/36):
-```python
-import torch
-
-# Model
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
-
-# Images
-dir = 'https://github.com/ultralytics/yolov5/raw/master/data/images/'
-imgs = [dir + f for f in ('zidane.jpg', 'bus.jpg')]  # batch of images
-
-# Inference
-results = model(imgs)
-results.print()  # or .show(), .save()
-```
 
 ## Citation
 
