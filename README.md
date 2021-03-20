@@ -1,5 +1,20 @@
 ## Baseball Ball Detection
 
+preprocessing.ipynb script allows me to create the desired data/folder structure to use train.py
+
+    
+    ├── train_data                  
+      ├── images                    
+         ├── train                    
+         └── val                 
+
+      ├── labels                    
+         ├── train
+         └── val
+
+
+Here are some of the results of fine-tuning yolov5
+
 | ![14.jpg](14.jpg) | 
 |:--:| 
 | *Ball Detection 1* |
@@ -57,7 +72,7 @@ Training times for YOLOv5s/m/l/x are 2/4/6/8 days on a single V100 (multi-GPU ti
 $ python train.py --img 640 --batch 16 --epochs 50 --data baseball.yaml --weights yolov5s.pt --nosave --cache
 ```
 
-More information about inference, exporting, plotting can be found at  [ultralytics/yolov5](https://github.com/ultralytics/yolov5)
+More information about inference, exporting, plotting can be found at  [ultralytics/yolov5](https://github.com/ultralytics/yolov5). The google colab link I shared makes everything so much easier, it's easy to follow.
 
 
 ## Inference
