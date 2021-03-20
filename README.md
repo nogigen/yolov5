@@ -1,4 +1,4 @@
-## Baseball Ball Detection
+## Baseball Ball Detection with yolov5
 
 preprocessing.ipynb script allows me to create the desired data/folder structure to use train.py
 
@@ -16,7 +16,7 @@ preprocessing.ipynb script allows me to create the desired data/folder structure
 I saved the google colab that I worked as a .ipynb, you can check baseball_ball_detection_w_yolov5.ipynb for that.
 
 
-Here are some of the results of fine-tuning yolov5
+Here are some of the results of fine-tuning yolov5.
 
 | ![14.jpg](14.jpg) | 
 |:--:| 
